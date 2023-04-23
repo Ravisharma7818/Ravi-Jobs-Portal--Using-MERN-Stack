@@ -1,16 +1,18 @@
-const mongoose = require("mongoose");
-dbConnect()
-async function dbConnect() {
+const mongoose = require('mongoose');
+
+const connectDB = async () => {
 
     try {
-        await mongoose.connect('mongodb://localhost:27017/RaviJobs', { useNewUrlParser: true });
-        console.log('Mongo DB Connection success')
+        const conn = await mongoose.connect(process.env.MY_MONGO_URI, {
+            useUnifiedTopology: true,
+            useNewUrlParser: true,
+        })
+        console.log(`mongo database is connected!!!`)
     } catch (error) {
-        console.log('Mongo DB Connection failed')
+        console.error(`Error: ${error} `)
+        process.exit(1) //passing 1 - will exit the proccess with error
     }
 
 }
 
-module.exports = mongoose
-
-
+module.exports = connectDB
