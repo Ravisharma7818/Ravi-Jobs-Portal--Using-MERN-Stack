@@ -28,4 +28,8 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
 
 connectDB();
 
-app.listen(port, () => console.log('Node JS Server Started'));
+app.listen(port, () =>
+
+    console.log(`Server started on PORT: ${process.env.PORT} `)
+
+);
