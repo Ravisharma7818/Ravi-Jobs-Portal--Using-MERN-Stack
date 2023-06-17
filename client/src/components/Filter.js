@@ -34,7 +34,7 @@ function Filter() {
     }
     return (
         <div className="flex">
-            <Search onSearch={(value) => { dispatch(searchJobs(value)) }} />
+            <Search onSearch={(value) => { dispatch(searchJobs(value)) }} placeholder="Search ..." />
             <FilterOutlined onClick={showModal} />
 
             <Modal title="Select filters" footer={false} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} closable={false}>

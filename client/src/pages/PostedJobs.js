@@ -127,7 +127,6 @@ function PostedJobs() {
         />
     }
 
-    console.log(userPostedJobs);
     return (
         <div>
             <DefaultLayout>
@@ -137,7 +136,7 @@ function PostedJobs() {
 
                 <Modal
                     title="Applied Candidates List"
-                    visible={isModalVisible}
+                    open={isModalVisible}
                     closable={false}
                     onOk={handleOk}
                     onCancel={handleCancel}

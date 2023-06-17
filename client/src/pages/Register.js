@@ -13,7 +13,6 @@ function Register() {
         if (values.password !== values.confirmpassword) {
             message.error('passwords not matched')
         } else {
-            console.log(values)
             dispatch(registerUser(values))
         }
 

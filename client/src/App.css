@@ -53,3 +53,18 @@
   margin-top: -0.1px;
   padding-top: 0.1px;
 }
+
+.circle {
+  display: inline-block;
+  background-color: #00d53b;
+  border-radius: 50%;
+  height: 40px;
+  width: 50px;
+}
+
+.circle-inner {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 6px;
+}

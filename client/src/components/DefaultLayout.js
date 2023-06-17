@@ -27,7 +27,6 @@ const DefaultLayout = (props) => {
     function logoutUser(e) {
         e.preventDefault();
         const user = JSON.parse(localStorage.getItem('user'))
-        console.log(user);
         localStorage.removeItem('user');
 
         window.location.href = "/login";
@@ -64,7 +63,7 @@ const DefaultLayout = (props) => {
                         {
                             key: '/profile',
                             icon: <UserOutlined />,
-                            label: <Link to="/profile">Profile</Link>,
+                            label: <Link to="/profile">My Profile</Link>,
                         },
                         {
                             key: '/appliedjobs',
@@ -99,7 +98,6 @@ const DefaultLayout = (props) => {
                         padding: 0,
                         background: colorBgContainer,
                         position: 'sticky',
-                        overflow: 'auto',
                         zIndex: 9999,
                         top: 0,
 
@@ -126,8 +124,10 @@ const DefaultLayout = (props) => {
                         <Filter />
 
 
-                        <div style={{ display: collapsed ? 'none' : 'inline' }}>
-                            <h5 className="mr-2"><b>{user.username}</b></h5>
+                        <div style={{ display: collapsed ? 'none' : 'inline' }} class="circle">
+                            <Link to="/profile">
+                                <h5 className="circle-inner"><b>{user.username ? user.username.slice(0, 1).toUpperCase() : ""}</b></h5>
+                            </Link>
                         </div>
 
                     </div>
@@ -135,8 +135,8 @@ const DefaultLayout = (props) => {
                 </Header>
                 <Content
                     style={{
-                        margin: '24px 16px',
-                        padding: 24,
+
+                        padding: 13,
                         minHeight: 280,
                         background: colorBgContainer,
                     }}

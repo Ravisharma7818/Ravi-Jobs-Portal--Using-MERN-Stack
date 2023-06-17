@@ -81,7 +81,6 @@ export const getAllUsers = () => async (dispatch) => {
         dispatch({ type: "GET_ALL_USERS", payload: response.data });
         dispatch({ type: "LOADING", payload: false });
     } catch (error) {
-        console.log(error);
         dispatch({ type: "LOADING", payload: false });
     }
 };

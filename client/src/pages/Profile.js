@@ -13,7 +13,6 @@ const Profile = () => {
     const dispatch = useDispatch()
     function onPersonInfoSubmit(values) {
         setPersonalInfo(values);
-        console.log(values);
         setActiveTab("2");
     }
 
@@ -21,7 +20,6 @@ const Profile = () => {
 
         const finalObj = { ...personalInfo, ...values }
 
-        console.log(finalObj)
 
         dispatch(updateUser(finalObj))
 

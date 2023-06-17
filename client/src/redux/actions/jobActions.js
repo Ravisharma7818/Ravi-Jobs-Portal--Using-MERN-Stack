@@ -8,12 +8,11 @@ export const getAlljobs = () => async dispatch => {
     dispatch({ type: 'LOADING', payload: true })
     try {
         const response = await axios.get('/api/jobs/getalljobs')
-        console.log(response);
+
         dispatch({ type: "GET_ALL_JOBS", payload: response.data });
         dispatch({ type: 'LOADING', payload: false })
 
     } catch (error) {
-        console.log(error);
         dispatch({ type: 'LOADING', payload: false })
 
 
@@ -37,7 +36,6 @@ export const postJob = (values) => async (dispatch) => {
             window.location.href = "/";
         }, 1000);
     } catch (error) {
-        console.log(error);
         dispatch({ type: "LOADING", payload: false });
     }
 };
@@ -59,7 +57,6 @@ export const editJob = (values) => async (dispatch) => {
             window.location.href = "/";
         }, 1000);
     } catch (error) {
-        console.log(error);
         dispatch({ type: "LOADING", payload: false });
     }
 };
@@ -84,7 +81,6 @@ export const applyJob = (job) => async (dispatch) => {
             window.location.href = "/";
         }, 1000);
     } catch (error) {
-        console.log(error);
         dispatch({ type: "LOADING", payload: false });
     }
 };
@@ -106,7 +102,6 @@ export const searchJobs = (searchKey) => async (dispatch) => {
         dispatch({ type: "GET_ALL_JOBS", payload: filteredJobs });
         dispatch({ type: "LOADING", payload: false });
     } catch (error) {
-        console.log(error);
         dispatch({ type: "LOADING", payload: false });
     }
 };
@@ -135,7 +130,6 @@ export const sortJobs = (values) => async (dispatch) => {
         dispatch({ type: "GET_ALL_JOBS", payload: filteredJobs });
         dispatch({ type: "LOADING", payload: false });
     } catch (error) {
-        console.log(error);
         dispatch({ type: "LOADING", payload: false });
     }
 };

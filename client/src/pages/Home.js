@@ -21,8 +21,8 @@ const Home = () => {
             <DefaultLayout>
                 <Row gutter={16}>
                     {jobs.map((job) => {
-                        return <Col lg={12} sm={24}>
-                            <div className="job-div bs m-2 p-2">
+                        return <Col lg={12} sm={24} classNamevisible="containerres" key={job._id}>
+                            <div className="job-div bs m-2 p-2" key={job._id}>
                                 <h4>{job.title}</h4>
                                 <p>{job.company}</p>
                                 <hr />

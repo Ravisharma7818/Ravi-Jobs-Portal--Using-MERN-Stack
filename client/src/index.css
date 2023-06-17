@@ -114,3 +114,25 @@ h1 {
 :where(.css-dev-only-do-not-override-1fviqcj).ant-layout.ant-layout-footer {
   box-shadow: 0 0 0 1px rgb(196, 197, 199) !important;
 }
+
+@media only screen and (max-width: 600px) {
+  :where(.css-dev-only-do-not-override-1fviqcj).ant-col {
+    position: relative !important;
+    min-height: 1px !important;
+  }
+  job-div {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  :where(.css-dev-only-do-not-override-1fviqcj).ant-col {
+    position: relative !important;
+    min-height: 1px !important;
+  }
+  job-div {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}

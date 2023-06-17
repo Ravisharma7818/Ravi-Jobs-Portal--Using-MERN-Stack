@@ -29,7 +29,6 @@ function EditJob({ match }) {
         const finalObj = { ...jobInfo, ...values };
 
         finalObj._id = id
-        console.log(finalObj)
         dispatch(editJob(finalObj))
     }
 
@@ -38,7 +37,6 @@ function EditJob({ match }) {
 
     const job = jobs.find(job => job._id === id)
 
-    console.log(job)
 
     return (
         <div>
